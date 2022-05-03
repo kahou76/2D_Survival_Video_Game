@@ -4,49 +4,28 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 3f;
     public Rigidbody2D rb;
-    private bool isMoving;
+    // private bool isMoving;
     private Vector2 input;
-    private Vector2 moveDirection;
+    // private Vector2 moveDirection;
 
 
     // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-            // if(!isMoving){
-            //     input.x = Input.GetAxisRaw("Horizontal");
-            //     input.y = Input.GetAxisRaw("Vertical");
-
-            //     if( input != Vector2.zero){
-            //         var targetPos = transform.position;
-            //         targetPos.x += input.x;
-            //         targetPos.y += input.y;
-
-            //         StartCoroutine(Move(targetPos));
-            //     }
-
-            // }
+            
         ProcessInputs();
         
     }
 
-    // IEnumerator Move(Vector3 targetPos){
 
-    //     isMoving = true;
-
-    //     while((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon){
-    //         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-    //         yield return null;
-    //     }
-    //     transform.position = targetPos;
-    // }
 
     void FixedUpdate() {
         //physics calculations
@@ -54,18 +33,32 @@ public class PlayerControl : MonoBehaviour
     }
 
     void ProcessInputs(){
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
 
-        moveDirection = new Vector2(moveX,moveY);
+        //moveDirection = new Vector2(moveX,moveY);
     }
 
 
     void Move(){
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+       // rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+       rb.velocity = input.normalized * moveSpeed;
+
+       CheckForFlipping();
     }
 
-    
+    void CheckForFlipping(){
+        bool movingLeft = input.x < 0;
+        bool movingRight = input.x > 0;
+        
+        if(movingLeft){
+            transform.localScale = new Vector3(-1f,transform.localScale.y);
+        }
+
+        if(movingRight){
+            transform.localScale = new Vector3(1f,transform.localScale.y);
+        }
+    }
     
     
 }
