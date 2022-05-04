@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovementArrow : MonoBehaviour
 {
     public float speed = 3f;
-
     public Rigidbody2D rb;
     public Vector2 pos;
 
@@ -21,17 +20,17 @@ public class MovementArrow : MonoBehaviour
 
         pos = transform.position;
  
-        if (Input.GetKey ("u")) {
+        if (Input.GetKey ("up")) {
             pos.y += speed * Time.deltaTime;
         }
-        if (Input.GetKey ("j")) {
+        if (Input.GetKey ("down")) {
             pos.y -= speed * Time.deltaTime;
         }
-        if (Input.GetKey ("k")) {
+        if (Input.GetKey ("right")) {
             pos.x += speed * Time.deltaTime;
             transform.localScale = new Vector3(1f,transform.localScale.y);
         }
-        if (Input.GetKey ("h")) {
+        if (Input.GetKey ("left")) {
             pos.x -= speed * Time.deltaTime;
             transform.localScale = new Vector3(-1f,transform.localScale.y);
         }
