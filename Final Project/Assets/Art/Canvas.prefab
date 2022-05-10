@@ -500,9 +500,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9207294826292619527}
-        m_TargetAssemblyTypeName: PauseMenuVersion02, Assembly-CSharp
-        m_MethodName: UnPause
+      - m_Target: {fileID: 8685419170890599693}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
