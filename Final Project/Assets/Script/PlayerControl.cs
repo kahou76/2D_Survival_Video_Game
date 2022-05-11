@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     // private bool isMoving;
     private Vector2 input;
     // private Vector2 moveDirection;
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -21,7 +22,12 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
             
-        ProcessInputs();
+        // ProcessInputs();
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("speed",Mathf.Abs(input.x));
+
         
     }
 
@@ -32,12 +38,12 @@ public class PlayerControl : MonoBehaviour
         Move();
     }
 
-    void ProcessInputs(){
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+    // void ProcessInputs(){
+    //     input.x = Input.GetAxisRaw("Horizontal");
+    //     input.y = Input.GetAxisRaw("Vertical");
 
-        //moveDirection = new Vector2(moveX,moveY);
-    }
+    //     //moveDirection = new Vector2(moveX,moveY);
+    // }
 
 
     void Move(){

@@ -8,6 +8,7 @@ public class MovementWASD : MonoBehaviour
 
     public Rigidbody2D rb;
     public Vector2 pos;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -23,18 +24,24 @@ public class MovementWASD : MonoBehaviour
  
         if (Input.GetKey ("w")) {
             pos.y += speed * Time.deltaTime;
+            //animator.SetFloat("speed",Mathf.Abs(speed));
         }
         if (Input.GetKey ("s")) {
             pos.y -= speed * Time.deltaTime;
+            //animator.SetFloat("speed",Mathf.Abs(speed));
         }
         if (Input.GetKey ("d")) {
             pos.x += speed * Time.deltaTime;
             transform.localScale = new Vector3(1f,transform.localScale.y);
+            animator.SetFloat("speed",Mathf.Abs(speed));
         }
         if (Input.GetKey ("a")) {
             pos.x -= speed * Time.deltaTime;
             transform.localScale = new Vector3(-1f,transform.localScale.y);
+            animator.SetFloat("speed",Mathf.Abs(speed));
         }
+
+        
             
 
         transform.position = pos;
