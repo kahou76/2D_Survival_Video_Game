@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPause = false;
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -37,11 +40,6 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
             GameIsPause = true;
-        }
-
-        void LoadMenu()
-        {
-            Debug.Log("Loading menu...");
         }
     }
 }
