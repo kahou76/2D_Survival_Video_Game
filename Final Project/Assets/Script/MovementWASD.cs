@@ -21,29 +21,33 @@ public class MovementWASD : MonoBehaviour
     { 
 
         pos = transform.position;
- 
-        if (Input.GetKey ("w")) {
+
+        if (Input.GetKey("w"))
+        {
             pos.y += speed * Time.deltaTime;
-            //animator.SetFloat("speed",Mathf.Abs(speed));
+            animator.SetFloat("Speed", Mathf.Abs(speed));
         }
-        if (Input.GetKey ("s")) {
+        else if (Input.GetKey("s"))
+        {
             pos.y -= speed * Time.deltaTime;
-            //animator.SetFloat("speed",Mathf.Abs(speed));
+            animator.SetFloat("Speed", Mathf.Abs(speed));
         }
-        if (Input.GetKey ("d")) {
+        else if (Input.GetKey("d"))
+        {
             pos.x += speed * Time.deltaTime;
-            transform.localScale = new Vector3(1f,transform.localScale.y);
-            animator.SetFloat("speed",Mathf.Abs(speed));
+            transform.localScale = new Vector3(1f, transform.localScale.y);
+            animator.SetFloat("Speed", Mathf.Abs(speed));
         }
-        if (Input.GetKey ("a")) {
+        else if (Input.GetKey("a"))
+        {
             pos.x -= speed * Time.deltaTime;
-            transform.localScale = new Vector3(-1f,transform.localScale.y);
-            animator.SetFloat("speed",Mathf.Abs(speed));
+            transform.localScale = new Vector3(-1f, transform.localScale.y);
+            animator.SetFloat("Speed", Mathf.Abs(speed));
         }
-
-        
-            
-
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }
         transform.position = pos;
 
         //CheckForFlipping();

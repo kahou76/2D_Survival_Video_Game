@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
     private GameObject attackArea = default;
 
     private bool attacking = false;
-
     private float timeToAttack = 0.25f;
     private float timer = 0f;
     public Animator animator;
-
+    public UnityEvent StopAttack;
     // Start is called before the first frame update
     void Start()
     {
