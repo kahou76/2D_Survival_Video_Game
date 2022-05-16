@@ -5,8 +5,10 @@ using UnityEngine;
 public class MovementArrow : MonoBehaviour
 {
     public float speed = 3f;
+
     public Rigidbody2D rb;
     public Vector2 pos;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -19,26 +21,36 @@ public class MovementArrow : MonoBehaviour
     { 
 
         pos = transform.position;
- 
-        if (Input.GetKey ("up")) {
-            pos.y += speed * Time.deltaTime;
-        }
-        if (Input.GetKey ("down")) {
-            pos.y -= speed * Time.deltaTime;
-        }
-        if (Input.GetKey ("right")) {
-            pos.x += speed * Time.deltaTime;
-            transform.localScale = new Vector3(1f,transform.localScale.y);
-        }
-        if (Input.GetKey ("left")) {
-            pos.x -= speed * Time.deltaTime;
-            transform.localScale = new Vector3(-1f,transform.localScale.y);
-        }
-            
 
+        if (Input.GetKey("up"))
+        {
+            pos.y += speed * Time.deltaTime;
+            animator.SetFloat("Speed", Mathf.Abs(speed));
+        }
+        else if (Input.GetKey("down"))
+        {
+            pos.y -= speed * Time.deltaTime;
+            animator.SetFloat("Speed", Mathf.Abs(speed));
+        }
+        else if (Input.GetKey("right"))
+        {
+            pos.x += speed * Time.deltaTime;
+            transform.localScale = new Vector3(1f, transform.localScale.y);
+            animator.SetFloat("Speed", Mathf.Abs(speed));
+        }
+        else if (Input.GetKey("left"))
+        {
+            pos.x -= speed * Time.deltaTime;
+            transform.localScale = new Vector3(-1f, transform.localScale.y);
+            animator.SetFloat("Speed", Mathf.Abs(speed));
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }
         transform.position = pos;
 
-        // CheckForFlipping();
+        //CheckForFlipping();
         
     }
 

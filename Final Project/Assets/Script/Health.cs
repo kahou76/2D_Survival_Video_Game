@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    [SerializeField] private int health;
 
-    private int MAX_HEALTH = 100;
+    public int MAX_HEALTH = 100;
+    public BloodBar bloodBar;
 
-    // public int mana = 50;
-    // [SerializeField] private int experience = 42;
+
 
     // Start is called before the first frame update
-    // void Start()
-    // {
-    //     // health -= 20;
-    //     Debug.Log("Current Experience " + experience); // Added so we stop getting the warning anymore
-    // }
+    void Start()
+    {
+        // health -= 20;
+        //Debug.Log("Current Experience " + experience); // Added so we stop getting the warning anymore
+        health = MAX_HEALTH;
+        bloodBar.SetMaxHealth(MAX_HEALTH);
+    }
 
     // Update is called once per frame
     void Update()
@@ -51,6 +54,8 @@ public class Health : MonoBehaviour
             throw new System.ArgumentOutOfRangeException("Cannot have negative damage");
         }
         this.health -= amount;
+
+        bloodBar.SetHealth(health);
 
         if(health <= 0){
             Die();

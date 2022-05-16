@@ -14,6 +14,6 @@ public class Background : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Sprite");
+        SceneManager.LoadScene("Heath");
     }
 }
