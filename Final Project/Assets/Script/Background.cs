@@ -9,7 +9,6 @@ public class Background : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Game closed");
-
     }
 
     public void StartGame()
