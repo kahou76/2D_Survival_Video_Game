@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int health;
+    [Header("Death Sound")]
+    [SerializeField] private AudioClip deathSound;
 
     public int MAX_HEALTH = 100;
     public BloodBar bloodBar;
-
+    
 
 
     // Start is called before the first frame update
@@ -75,9 +77,8 @@ public class Health : MonoBehaviour
 
         if(health <= 0){
             Die();
+            SoundManager.instance.PlaySound(deathSound);
         }
-
-
     }
 
     public void Heal(int amount){
