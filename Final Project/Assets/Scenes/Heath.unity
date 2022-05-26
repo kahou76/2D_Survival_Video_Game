@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 922082877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e9eafde77910849ac8741d9c1a0cc3, type: 3}
+  m_Script: {fileID: 11500000, guid: a5bd64a46ca17f04cb724b97a0d1d79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &954878414
@@ -6156,7 +6156,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1213954379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e9eafde77910849ac8741d9c1a0cc3, type: 3}
+  m_Script: {fileID: 11500000, guid: a5bd64a46ca17f04cb724b97a0d1d79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!60 &1213954382
@@ -6310,7 +6310,7 @@ MonoBehaviour:
   health: 100
   deathSound: {fileID: 8300000, guid: 442eca790ecfd674b9001b2811450dea, type: 3}
   MAX_HEALTH: 100
-  bloodBar: {fileID: 0}
+  bloodBar: {fileID: 956128763}
 --- !u!114 &1252776410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6746,7 +6746,7 @@ MonoBehaviour:
   health: 100
   deathSound: {fileID: 8300000, guid: 442eca790ecfd674b9001b2811450dea, type: 3}
   MAX_HEALTH: 100
-  bloodBar: {fileID: 0}
+  bloodBar: {fileID: 2028654355}
 --- !u!114 &1762035904
 MonoBehaviour:
   m_ObjectHideFlags: 0

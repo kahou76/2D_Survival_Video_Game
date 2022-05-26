@@ -66,4 +66,9 @@ public class MovementWASD : MonoBehaviour
             transform.localScale = new Vector3(1f,transform.localScale.y);
         }
     }
+
+    public bool canAttack()
+    {
+        return pos.x == 0 && pos.y == 0;
+    }
 }
