@@ -13,6 +13,6 @@ public class Background : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Heath");
+        SceneManager.LoadScene("Health");
     }
 }

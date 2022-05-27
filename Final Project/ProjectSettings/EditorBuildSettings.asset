@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 737f0f91e490ef94ca2f9047a1b57de2
   - enabled: 1
-    path: Assets/Scenes/Heath.unity
+    path: Assets/Scenes/Health.unity
     guid: 2ea69f6fdf070f942a9a4b4d99dfd203
   m_configObjects: {}

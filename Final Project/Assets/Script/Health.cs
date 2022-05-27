@@ -11,8 +11,11 @@ public class Health : MonoBehaviour
 
     public int MAX_HEALTH = 100;
     public BloodBar bloodBar;
-    
+    public GameObject textDisplay;
+    public int secondsLeft = 10;
+    public bool takingAway = false;
 
+    public GameOverScreen GameOverScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,9 @@ public class Health : MonoBehaviour
         // health -= 20;
         //Debug.Log("Current Experience " + experience); // Added so we stop getting the warning anymore
         health = MAX_HEALTH;
+        Time.timeScale = 1f;
         bloodBar.SetMaxHealth(MAX_HEALTH);
+        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
     }
 
     // Update is called once per frame
@@ -40,9 +45,13 @@ public class Health : MonoBehaviour
         //     Debug.Log("RESPECT");
         // }
 
-
         if(Input.GetKeyDown(KeyCode.R)){
             Heal(10);
+        }
+
+        if(takingAway == false && secondsLeft > 0)
+        {
+            StartCoroutine(TimerTake());
         }
 
         // if(Input.GetKeyDown(KeyCode.K)){
@@ -78,11 +87,13 @@ public class Health : MonoBehaviour
         if(health <= 0){
             Die();
             SoundManager.instance.PlaySound(deathSound);
+            GameOver();
+            Time.timeScale = 0f;
         }
     }
 
     public void Heal(int amount){
-        if(amount <0){
+        if(amount < 0){
             throw new System.ArgumentOutOfRangeException("Cannot have negative healing");
         }
 
@@ -101,5 +112,31 @@ public class Health : MonoBehaviour
     private void Die(){
         Debug.Log("DEAD!!");
         Destroy(gameObject);
+    }
+
+    public void GameOver()
+    {
+        GameOverScreen.Setup();
+    }
+
+    IEnumerator TimerTake()
+    {
+        takingAway = true;
+        yield return new WaitForSeconds(1);
+        secondsLeft -= 1;
+        if(secondsLeft < 10)
+        {
+            textDisplay.GetComponent<Text>().text = "00:0"+ secondsLeft;
+        }
+        else
+        {
+            textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+        }
+        takingAway = false;
+
+        if (secondsLeft == 0)
+        {
+            GameOver();
+        }
     }
 }
