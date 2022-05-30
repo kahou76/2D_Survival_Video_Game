@@ -332,7 +332,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1689833579}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: restartHealthScence
+        m_MethodName: restartMonsterSpawnhScence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1469,6 +1469,7 @@ MonoBehaviour:
   secondsLeft: 60
   takingAway: 0
   GameOverScreen: {fileID: 0}
+  BackgroundMusic: {fileID: 0}
 --- !u!114 &473116086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7088,13 +7089,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 442eca790ecfd674b9001b2811450dea, type: 3}
   MAX_HEALTH: 100
   bloodBar: {fileID: 70552544}
   textDisplay: {fileID: 0}
   secondsLeft: 60
   takingAway: 0
   GameOverScreen: {fileID: 0}
+  BackgroundMusic: {fileID: 0}
 --- !u!114 &1252776410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7949,7 +7951,7 @@ GameObject:
   - component: {fileID: 1450889722}
   - component: {fileID: 1450889721}
   m_Layer: 0
-  m_Name: BackgroundAudio
+  m_Name: SoundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7962,12 +7964,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450889719}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.91, y: 0.72, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1762035910}
-  m_RootOrder: 1
+  m_Father: {fileID: 72111980}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1450889721
 MonoBehaviour:
@@ -8738,6 +8740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5788979340b7854a8c450c3fb3065ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverSound: {fileID: 8300000, guid: aa4e226f4ddbf5d47900ac09bef565c4, type: 3}
 --- !u!114 &1689833580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8971,6 +8974,50 @@ Transform:
   m_Father: {fileID: 1915510959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1752723900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752723901}
+  - component: {fileID: 1752723902}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752723901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752723900}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -149.87744, y: 56.013367, z: -142.58577}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 72111980}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752723902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752723900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5284ccd337914d6428ead1059d2deeac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundOverSound: {fileID: 8300000, guid: 7b37e26bae53e1e4cab3f6d27345a6b4, type: 3}
 --- !u!1 &1762035902
 GameObject:
   m_ObjectHideFlags: 0
@@ -9183,7 +9230,6 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1213954380}
-  - {fileID: 1450889720}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9245,6 +9291,7 @@ MonoBehaviour:
   secondsLeft: 10
   takingAway: 0
   GameOverScreen: {fileID: 1689833579}
+  BackgroundMusic: {fileID: 1752723902}
 --- !u!114 &1787457104
 MonoBehaviour:
   m_ObjectHideFlags: 0

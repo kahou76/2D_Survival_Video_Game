@@ -14,14 +14,12 @@ public class Health : MonoBehaviour
     public GameObject textDisplay;
     public int secondsLeft = 10;
     public bool takingAway = false;
-
     public GameOverScreen GameOverScreen;
+    public BackgroundMusic BackgroundMusic;
 
     // Start is called before the first frame update
     void Start()
     {
-        // health -= 20;
-        //Debug.Log("Current Experience " + experience); // Added so we stop getting the warning anymore
         health = MAX_HEALTH;
         Time.timeScale = 1f;
         bloodBar.SetMaxHealth(MAX_HEALTH);
@@ -104,9 +102,7 @@ public class Health : MonoBehaviour
             this.health = MAX_HEALTH;
         }else{
             this.health += amount;
-        }
-
-        
+        }    
     }
 
     private void Die(){
@@ -116,6 +112,7 @@ public class Health : MonoBehaviour
 
     public void GameOver()
     {
+        BackgroundMusic.SetupBackGround();
         GameOverScreen.Setup();
     }
 
@@ -137,6 +134,7 @@ public class Health : MonoBehaviour
         if (secondsLeft == 0)
         {
             GameOver();
+            Time.timeScale = 0f;
         }
     }
 }

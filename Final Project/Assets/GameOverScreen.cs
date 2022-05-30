@@ -6,15 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-   public void Setup()
+    [SerializeField] private AudioClip gameOverSound;
+
+    public void Setup()
     {
         gameObject.SetActive(true);
+        SoundManager.instance.PlaySound(gameOverSound);
     }
     public void restartHealthScence()
     {
         SceneManager.LoadScene("Health");
     }
-
+    public void restartMonsterSpawnhScence()
+    {
+        SceneManager.LoadScene("MonsterSpawner");
+    }
     public void exit()
     {
         SceneManager.LoadScene("MainMenu");
