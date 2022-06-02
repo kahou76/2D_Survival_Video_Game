@@ -1,24 +1,24 @@
 using UnityEngine;
 
-public class PlayerFireball : MonoBehaviour
+public class PlayerFireball02 : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] fireballs;
 
     private Animator anim;
-    private MovementWASD playerMovement;
+    private MovementArrow playerMovement;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        playerMovement = GetComponent<MovementWASD>();
+        playerMovement = GetComponent<MovementArrow>();
     }
 
     private void Update()
     {
-        if (Input.GetKey("g") && cooldownTimer > attackCooldown )
+        if (Input.GetKey("k") && cooldownTimer > attackCooldown )
             Attack();
 
         cooldownTimer += Time.deltaTime;
