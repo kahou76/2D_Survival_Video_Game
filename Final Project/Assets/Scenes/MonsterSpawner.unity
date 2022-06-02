@@ -1708,6 +1708,85 @@ MonoBehaviour:
     m_Extent: {x: 0.21499999, y: 0.30431998, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
+--- !u!1 &438198999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 438199000}
+  - component: {fileID: 438199003}
+  - component: {fileID: 438199002}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &438199000
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438198999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 72111980}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -254, y: 418.33}
+  m_SizeDelta: {x: 144.126, y: 114.661}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &438199002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438198999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &438199003
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438198999}
+  m_CullTransparentMesh: 1
 --- !u!1 &473116082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,6 +1863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathSound: {fileID: 0}
+  score: {fileID: 0}
   MAX_HEALTH: 100
   bloodBar: {fileID: 0}
   textDisplay: {fileID: 0}
@@ -3138,6 +3218,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786727386}
+  m_CullTransparentMesh: 1
+--- !u!1 &805890758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 805890759}
+  - component: {fileID: 805890762}
+  - component: {fileID: 805890761}
+  m_Layer: 5
+  m_Name: Score2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &805890759
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805890758}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 72111980}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 268, y: 409}
+  m_SizeDelta: {x: 144.126, y: 114.661}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &805890761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805890758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &805890762
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805890758}
   m_CullTransparentMesh: 1
 --- !u!1 &897103020
 GameObject:
@@ -8128,6 +8287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathSound: {fileID: 8300000, guid: 442eca790ecfd674b9001b2811450dea, type: 3}
+  score: {fileID: 438198999}
   MAX_HEALTH: 100
   bloodBar: {fileID: 70552544}
   textDisplay: {fileID: 0}
@@ -10660,12 +10820,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1762035902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590a0fade1bfd954499fde8eeb3c2222, type: 3}
+  m_Script: {fileID: 11500000, guid: 2aa8c4bcc0c6c104baf5b3861affc170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  deathSound: {fileID: 8300000, guid: 442eca790ecfd674b9001b2811450dea, type: 3}
+  score: {fileID: 805890758}
   MAX_HEALTH: 100
   bloodBar: {fileID: 784743369}
+  textDisplay: {fileID: 0}
+  secondsLeft: 10
+  takingAway: 0
+  GameOverScreen: {fileID: 0}
+  BackgroundMusic: {fileID: 0}
 --- !u!114 &1762035904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10895,6 +11062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   deathSound: {fileID: 0}
+  score: {fileID: 0}
   MAX_HEALTH: 100
   bloodBar: {fileID: 0}
   textDisplay: {fileID: 1787457101}
