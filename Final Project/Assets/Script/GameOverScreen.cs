@@ -15,16 +15,16 @@ public class GameOverScreen : MonoBehaviour
     }
     public void restartHealthScence()
     {
-        SceneManager.LoadScene("Health");
+        SceneManager.LoadScene("1v1 version02");
     }
     public void restartMonsterSpawnhScence()
     {
-        SceneManager.LoadScene("MonsterSpawner");
+        SceneManager.LoadScene("2vsbots");
     }
 
     public void restartMonsterScence()
     {
-        SceneManager.LoadScene("Monsters");
+        SceneManager.LoadScene("1vsbots");
     }
     public void exit()
     {

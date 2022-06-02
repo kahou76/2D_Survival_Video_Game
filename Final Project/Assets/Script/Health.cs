@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     [Header("Death Sound")]
     [SerializeField] private AudioClip deathSound;
 
-    public static int scoreValue = 0;
+    public int scoreValue = 0;
     public GameObject score;
     public int MAX_HEALTH = 100;
     public BloodBar bloodBar;
