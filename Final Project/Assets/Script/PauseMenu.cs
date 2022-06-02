@@ -18,6 +18,12 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
+    public void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPause = true;
+    }
 
     public GameObject pauseMenuUI;
     // Update is called once per frame
@@ -33,13 +39,6 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
-        }
-    
-        void Pause()
-        {
-            pauseMenuUI.SetActive(true);
-            Time.timeScale = 0f;
-            GameIsPause = true;
         }
     }
 }
