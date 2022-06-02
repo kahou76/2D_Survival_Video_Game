@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     [Header("Death Sound")]
     [SerializeField] private AudioClip deathSound;
 
-    public int scoreValue = 0;
+    public static int scoreValue = 0;
     public GameObject score;
     public int MAX_HEALTH = 100;
     public BloodBar bloodBar;
@@ -25,8 +25,7 @@ public class Health : MonoBehaviour
         health = MAX_HEALTH;
         Time.timeScale = 1f;
         bloodBar.SetMaxHealth(MAX_HEALTH);
-        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
-        
+        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;     
     }
 
     // Update is called once per frame

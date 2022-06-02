@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1689833579}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: restartMonsterSpawnhScence
+        m_MethodName: restartMonsterScence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
