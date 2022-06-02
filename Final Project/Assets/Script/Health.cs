@@ -29,20 +29,6 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     health -= 20;
-        //     if (health <= 0)
-        //     {
-        //         Debug.Log("Lol, you died. Press F to pay respect!");
-        //     }
-        // }
-
-        // if (health <= 0 && Input.GetKeyDown(KeyCode.F))
-        // {
-        //     Debug.Log("RESPECT");
-        // }
-
         if(Input.GetKeyDown(KeyCode.R)){
             Heal(10);
         }
@@ -51,10 +37,6 @@ public class Health : MonoBehaviour
         {
             StartCoroutine(TimerTake());
         }
-
-        // if(Input.GetKeyDown(KeyCode.K)){
-        //     // Damage(10);
-        // }
     }
 
     public void SetHealth(int maxHealth, int health)
@@ -84,9 +66,6 @@ public class Health : MonoBehaviour
 
         if(health <= 0){
             Die();
-            SoundManager.instance.PlaySound(deathSound);
-            GameOver();
-            Time.timeScale = 0f;
         }
     }
 
@@ -107,7 +86,10 @@ public class Health : MonoBehaviour
 
     private void Die(){
         Debug.Log("DEAD!!");
+        SoundManager.instance.PlaySound(deathSound);
+        GameOver();
         Destroy(gameObject);
+        Time.timeScale = 0f;
     }
 
     public void GameOver()

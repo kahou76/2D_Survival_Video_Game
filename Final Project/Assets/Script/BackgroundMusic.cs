@@ -10,13 +10,13 @@ public class BackgroundMusic : MonoBehaviour
 
     public void Start()
     {
-        SoundManager.instance.PlaySound(backgroundOverSound);
+        SoundManager.instance.PlayBackground(backgroundOverSound);
     }
 
     public void SetupBackGround()
     {
-        gameObject.SetActive(false);
         SoundManager.instance.PauseSound();
+        gameObject.SetActive(false); 
         GetComponent<BackgroundMusic>().enabled = false;
     }
 }

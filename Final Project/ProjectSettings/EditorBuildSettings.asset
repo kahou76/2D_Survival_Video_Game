@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Health.unity
     guid: 2ea69f6fdf070f942a9a4b4d99dfd203
+  - enabled: 1
+    path: Assets/Scenes/MonsterSpawner.unity
+    guid: 9ecc1954adad32b49b029e7b4de886c7
+  - enabled: 1
+    path: Assets/Scenes/Monsters.unity
+    guid: 459f5987aeeace248b2f8544ca01de31
   m_configObjects: {}

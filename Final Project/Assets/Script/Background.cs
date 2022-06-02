@@ -11,8 +11,18 @@ public class Background : MonoBehaviour
         Debug.Log("Game closed");
     }
 
-    public void StartGame()
+    public void StartGameMonsterSpawner()
+    {
+        SceneManager.LoadScene("MonsterSpawner");
+    }
+
+    public void StartGameHealth()
     {
         SceneManager.LoadScene("Health");
+    }
+
+    public void StartGameMonsters()
+    {
+        SceneManager.LoadScene("Monsters");
     }
 }
