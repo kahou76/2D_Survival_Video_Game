@@ -21,6 +21,11 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("MonsterSpawner");
     }
+
+    public void restartMonsterScence()
+    {
+        SceneManager.LoadScene("Monsters");
+    }
     public void exit()
     {
         SceneManager.LoadScene("MainMenu");
