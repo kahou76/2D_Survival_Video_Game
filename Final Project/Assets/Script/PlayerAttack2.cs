@@ -23,7 +23,7 @@ public class PlayerAttack2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("l"))
+        if(Input.GetKey("k"))
         {
             Attack();
             animator.SetBool("IsAttack",true);

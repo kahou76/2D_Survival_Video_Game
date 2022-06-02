@@ -1,24 +1,24 @@
 using UnityEngine;
 
-public class PlayerFireball : MonoBehaviour
+public class PlayerFireball021v1 : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] fireballs;
 
     private Animator anim;
-    private MovementWASD playerMovement;
+    private MovementArrow playerMovement;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        playerMovement = GetComponent<MovementWASD>();
+        playerMovement = GetComponent<MovementArrow>();
     }
 
     private void Update()
     {
-        if (Input.GetKey("g") && cooldownTimer > attackCooldown )
+        if (Input.GetKey("l") && cooldownTimer > attackCooldown )
             Attack();
 
         cooldownTimer += Time.deltaTime;
@@ -30,7 +30,7 @@ public class PlayerFireball : MonoBehaviour
         cooldownTimer = 0;
 
         fireballs[FindFireball()].transform.position = firePoint.position;
-        fireballs[FindFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        fireballs[FindFireball()].GetComponent<Projectile1v1>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
     private int FindFireball()
     {

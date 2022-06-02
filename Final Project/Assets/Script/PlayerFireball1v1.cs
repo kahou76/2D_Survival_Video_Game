@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerFireball : MonoBehaviour
+public class PlayerFireball1v1 : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
@@ -30,7 +30,7 @@ public class PlayerFireball : MonoBehaviour
         cooldownTimer = 0;
 
         fireballs[FindFireball()].transform.position = firePoint.position;
-        fireballs[FindFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        fireballs[FindFireball()].GetComponent<Projectile1v1>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
     private int FindFireball()
     {
