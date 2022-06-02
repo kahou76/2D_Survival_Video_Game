@@ -1570,6 +1570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathSound: {fileID: 0}
+  score: {fileID: 0}
   MAX_HEALTH: 100
   bloodBar: {fileID: 0}
   textDisplay: {fileID: 0}
@@ -8655,6 +8656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathSound: {fileID: 8300000, guid: 442eca790ecfd674b9001b2811450dea, type: 3}
+  score: {fileID: 0}
   MAX_HEALTH: 100
   bloodBar: {fileID: 956128763}
   textDisplay: {fileID: 0}
@@ -9573,6 +9575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   deathSound: {fileID: 0}
+  score: {fileID: 0}
   MAX_HEALTH: 100
   bloodBar: {fileID: 0}
   textDisplay: {fileID: 1729604463}
@@ -9661,6 +9664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathSound: {fileID: 8300000, guid: 442eca790ecfd674b9001b2811450dea, type: 3}
+  score: {fileID: 0}
   MAX_HEALTH: 100
   bloodBar: {fileID: 2028654355}
   textDisplay: {fileID: 0}
