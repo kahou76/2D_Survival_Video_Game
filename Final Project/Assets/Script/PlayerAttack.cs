@@ -12,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
     private float timer = 0f;
     public Animator animator;
     public UnityEvent StopAttack;
+    [SerializeField] private AudioClip knifeSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
             animator.SetBool("IsAttack",true);
+            SoundManager.instance.PlaySound(knifeSound);
         }
 
         if(attacking)
