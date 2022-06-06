@@ -9659,7 +9659,7 @@ MonoBehaviour:
   MAX_HEALTH: 100
   bloodBar: {fileID: 0}
   textDisplay: {fileID: 1787457101}
-  secondsLeft: 10
+  secondsLeft: 60
   takingAway: 0
   GameOverScreen: {fileID: 1689833579}
   BackgroundMusic: {fileID: 1752723902}
