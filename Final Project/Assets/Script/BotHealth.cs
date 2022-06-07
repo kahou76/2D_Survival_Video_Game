@@ -8,7 +8,7 @@ public class BotHealth : MonoBehaviour
     [SerializeField] private int health;
 
     public int MAX_HEALTH = 100;
-    // public BloodBar bloodBar;
+    public Enemy enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +41,7 @@ public class BotHealth : MonoBehaviour
             throw new System.ArgumentOutOfRangeException("Cannot have negative damage");
         }
         this.health -= amount;
+        // enemy.StunMe(3f);
 
         StartCoroutine(VisualIndicator(Color.red)); // Added for Visual Indicators
 

@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private EnemyData data;
 
     private GameObject player;
+    private float stunTimer = 0f;
+    public BotHealth bothealth;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,16 @@ public class Enemy : MonoBehaviour
 
     private void Swarm()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+
+            if(stunTimer <= 0) {
+                // Normal Behaviour
+                transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            }
+            else {
+                stunTimer -= Time.deltaTime;
+                // I am stunned.
+                transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * 0);
+            }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -46,8 +57,27 @@ public class Enemy : MonoBehaviour
             if(collider.GetComponent<Health>() != null)
             {
                 collider.GetComponent<Health>().Damage(damage);
-                this.GetComponent<Health>().Damage(10000);
+                this.GetComponent<BotHealth>().Damage(10000);
             }
         }
     }
+    public void StunMe(float duration) {
+        stunTimer = duration;
+    }
 }
+
+// private float stunTimer;
+
+// private void Update() {
+
+//     if(stunTimer <= 0) {
+//         // Normal Behaviour
+//     }
+//     else {
+//         stunTimer -= Time.deltaTime;
+//         // I am stunned.
+//     }
+// }
+// public void StunMe(float duration) {
+//     stunTimer = duration;
+// }
