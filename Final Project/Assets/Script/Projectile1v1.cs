@@ -10,7 +10,7 @@ public class Projectile1v1 : MonoBehaviour
     private Animator anim;
     private BoxCollider2D boxCollider;
 
-    private int damage = 10;
+    private int damage = 3;
 
 
     private void Awake()
