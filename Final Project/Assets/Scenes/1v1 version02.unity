@@ -1375,7 +1375,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: W
+  m_Text: G
 --- !u!222 &233451891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3456,7 +3456,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: L
+  m_Text: K
 --- !u!222 &978747573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4023,8 +4023,8 @@ MonoBehaviour:
   textDisplay: {fileID: 0}
   secondsLeft: 60
   takingAway: 0
-  GameOverScreen: {fileID: 0}
-  BackgroundMusic: {fileID: 0}
+  GameOverScreen: {fileID: 1689833579}
+  BackgroundMusic: {fileID: 1752723902}
 --- !u!114 &1252776410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,8 +5508,8 @@ MonoBehaviour:
   textDisplay: {fileID: 0}
   secondsLeft: 10
   takingAway: 0
-  GameOverScreen: {fileID: 0}
-  BackgroundMusic: {fileID: 0}
+  GameOverScreen: {fileID: 1689833579}
+  BackgroundMusic: {fileID: 1752723902}
 --- !u!114 &1762035904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5794,7 +5794,7 @@ MonoBehaviour:
   MAX_HEALTH: 100
   bloodBar: {fileID: 0}
   textDisplay: {fileID: 1787457101}
-  secondsLeft: 10
+  secondsLeft: 60
   takingAway: 0
   GameOverScreen: {fileID: 1689833579}
   BackgroundMusic: {fileID: 1752723902}

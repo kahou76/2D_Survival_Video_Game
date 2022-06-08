@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         health = MAX_HEALTH;
         Time.timeScale = 1f;
         bloodBar.SetMaxHealth(MAX_HEALTH);
-        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;     
+        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
     }
 
     // Update is called once per frame
@@ -103,6 +103,10 @@ public class Health : MonoBehaviour
         GameOverScreen.Setup();
     }
 
+    public void Reset()
+    {
+        scoreValue = 0;
+    }
     IEnumerator TimerTake()
     {
         takingAway = true;

@@ -218,6 +218,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1787457103}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &25821121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,7 +1387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: W
+  m_Text: G
 --- !u!222 &233451891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2098,7 +2110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -254, y: 418.33}
+  m_AnchoredPosition: {x: -254, y: 409.00003}
   m_SizeDelta: {x: 144.126, y: 114.661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &438199002
@@ -3241,7 +3253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 268, y: 409}
+  m_AnchoredPosition: {x: 249, y: 409}
   m_SizeDelta: {x: 144.126, y: 114.661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805890761
@@ -3614,7 +3626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: L
+  m_Text: K
 --- !u!222 &978747573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8981,7 +8993,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: W
+  m_Text: L
 --- !u!222 &1624492706
 CanvasRenderer:
   m_ObjectHideFlags: 0
