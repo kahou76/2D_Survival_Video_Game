@@ -13,7 +13,7 @@ public class Background : MonoBehaviour
 
     public void StartGameMonsterSpawner()
     {
-        SceneManager.LoadScene("2vsbots");
+        SceneManager.LoadScene("2vsbots02");
     }
 
     public void StartGameHealth()
@@ -23,6 +23,6 @@ public class Background : MonoBehaviour
 
     public void StartGameMonsters()
     {
-        SceneManager.LoadScene("1vsbots");
+        SceneManager.LoadScene("1vsbots002");
     }
 }

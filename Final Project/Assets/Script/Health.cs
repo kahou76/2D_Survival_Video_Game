@@ -92,8 +92,7 @@ public class Health : MonoBehaviour
         Debug.Log("DEAD!!");
         Destroy(gameObject);
         SoundManager.instance.PlaySound(deathSound);
-        GameOver();
-        
+        GameOver();      
         Time.timeScale = 0f;
     }
 

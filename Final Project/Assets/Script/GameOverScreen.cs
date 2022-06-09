@@ -19,12 +19,12 @@ public class GameOverScreen : MonoBehaviour
     }
     public void restartMonsterSpawnhScence()
     {
-        SceneManager.LoadScene("2vsbots");
+        SceneManager.LoadScene("2vsbots02");
     }
 
     public void restartMonsterScence()
     {
-        SceneManager.LoadScene("1vsbots");
+        SceneManager.LoadScene("1vsbots002");
     }
     public void exit()
     {

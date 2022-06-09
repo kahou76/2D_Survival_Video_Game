@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/1v1 version02.unity
     guid: 528a71f724dc1fc44b321abb21df1c21
   - enabled: 1
-    path: Assets/Scenes/1vsbots.unity
-    guid: 0d76e590532bcf04b8618eb34e7fa56d
+    path: Assets/Scenes/1vsbots002.unity
+    guid: 854ca788d00a6dd42b3eff232052746c
   - enabled: 1
-    path: Assets/Scenes/2vsbots.unity
-    guid: f78348d44a5d6484ca5180e4313ed213
+    path: Assets/Scenes/2vsbots02.unity
+    guid: 47ab69d26489fac4e92ba7e303c1e728
   m_configObjects: {}

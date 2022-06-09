@@ -24,28 +24,9 @@ public class Health02 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     health -= 20;
-        //     if (health <= 0)
-        //     {
-        //         Debug.Log("Lol, you died. Press F to pay respect!");
-        //     }
-        // }
-
-        // if (health <= 0 && Input.GetKeyDown(KeyCode.F))
-        // {
-        //     Debug.Log("RESPECT");
-        // }
-
-
         if(Input.GetKeyDown(KeyCode.O)){
             Heal(10);
         }
-
-        // if(Input.GetKeyDown(KeyCode.K)){
-        //     // Damage(10);
-        // }
     }
 
     public void SetHealth(int maxHealth, int health)
